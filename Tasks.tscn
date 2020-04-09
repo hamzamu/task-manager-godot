@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Tasks.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://logo.png" type="Texture" id=3]
+
+[node name="Control" type="Control"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="setTask" type="TextEdit" parent="."]
+margin_left = 19.5445
+margin_top = 499.801
+margin_right = 765.544
+margin_bottom = 527.801
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "New task"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 15.8613
+margin_top = 29.0394
+margin_right = 775.861
+margin_bottom = 492.039
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tasks" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 760.0
+margin_bottom = 463.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+visible = false
+position = Vector2( 688.761, 271.33 )
+texture = ExtResource( 2 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 651.929
+margin_top = 20.8716
+margin_right = 779.929
+margin_bottom = 148.872
+texture_normal = ExtResource( 3 )
+[connection signal="focus_entered" from="setTask" to="." method="_on_setTask_focus_entered"]
+[connection signal="gui_input" from="setTask" to="." method="_on_setTask_gui_input"]
