@@ -4,6 +4,8 @@ This is an experimental task manager created with Godot Game Engine
 
 
 
+![](https://github.com/hamzamu/task-manager-godot/blob/master/logo.png?raw=true)
+
 
 
 ### Features
