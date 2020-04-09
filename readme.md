@@ -8,10 +8,15 @@ This is an experimental task manager created with Godot Game Engine
 
 
 
+
+
+
+
+
+
 ### Features
 
 - Auto safe
-- Tabs/ Space for organization
 - Files are easily backuped as JSON file
 
 File location
