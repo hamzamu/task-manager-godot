@@ -8,7 +8,8 @@ This is an experimental task manager created with Godot Game Engine
 
 A single one-file-note app for minimalists. Built quickly using Godot Game-engine, to quickly draft daily notes, tasks.
 
-![ScreenShot](https://github.com/hamzamu/one-file-note/blob/master/screenshot.png?raw=true)## Features
+![ScreenShot](https://github.com/hamzamu/task-manager-godot/blob/master/screenshot.png?raw=true)
+### Features
 
 - Auto safe
 - Tabs/ Space for organization
