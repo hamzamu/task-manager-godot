@@ -11,10 +11,10 @@ __meta__ = {
 }
 
 [node name="setTask" type="TextEdit" parent="."]
-margin_left = 19.5445
-margin_top = 499.801
-margin_right = 765.544
-margin_bottom = 527.801
+margin_left = 20.0
+margin_top = 554.021
+margin_right = 766.0
+margin_bottom = 575.021
 size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "New task"
@@ -23,17 +23,17 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 15.8613
-margin_top = 29.0394
-margin_right = 775.861
-margin_bottom = 492.039
+margin_left = 16.0
+margin_top = 29.0
+margin_right = 776.0
+margin_bottom = 541.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="tasks" type="VBoxContainer" parent="ScrollContainer"]
 margin_right = 760.0
-margin_bottom = 463.0
+margin_bottom = 512.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -48,10 +48,14 @@ position = Vector2( 688.761, 271.33 )
 texture = ExtResource( 2 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
+visible = false
 margin_left = 651.929
 margin_top = 20.8716
 margin_right = 779.929
 margin_bottom = 148.872
 texture_normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="focus_entered" from="setTask" to="." method="_on_setTask_focus_entered"]
 [connection signal="gui_input" from="setTask" to="." method="_on_setTask_gui_input"]

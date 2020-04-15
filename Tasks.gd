@@ -2,9 +2,15 @@ extends Control
 var path = "user://data.json"
 var path2 = "res://data.json"
 # Setting default path
-var current_path = path2
+var current_path = path
 
 var tasks;
+var tasksTemplate = [
+	{
+		"task":"Your first task",
+		"done": false
+	}
+]
 
 #### App is ready ####
 func _ready():
@@ -15,6 +21,8 @@ func _ready():
 #### renderTasks ####
 func renderTasks():
 	# tasks || data
+	if tasks == null:
+		tasks = tasksTemplate
 	for task in tasks:
 		create_task_element(task)
 	return
@@ -116,8 +124,6 @@ func read_file():
 #####################################################
 func save_file(data):
 	var file = File.new();	
-	#data.note = $HBoxContainer/Editor.text;
-	#setStat()
 	file.open(current_path, File.WRITE)
 	file.store_line(to_json(data))
 	file.close()
